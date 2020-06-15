@@ -12,25 +12,28 @@ body {
     min-height: 100vh;
     background: #000;
 }
+
 .container {
     position: relative;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(45deg,transparent,transparent 40%, #e5f403);
+    background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
     animation: animate 2s linear infinite;
 }
+
 @keyframes animate {
-    0%
-    {
+    0% {
         transform: rotate(0deg);
         filter: hue-rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
         filter: hue-rotate(360deg);
     }
 }
+
 .container:before {
     content: "";
     position: absolute;
@@ -39,10 +42,11 @@ body {
     right: 6px;
     bottom: 6px;
     background: #000000;
-    border-radius: 50%;   
+    border-radius: 50%;
     z-index: 1000;
 
 }
+
 .container::after {
     content: "";
     position: absolute;
@@ -50,8 +54,8 @@ body {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background: linear-gradient(45deg,transparent,transparent 40%, #e5f403);
-    border-radius: 50%;   
+    background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+    border-radius: 50%;
     z-index: 1;
-    filter: blur(30px);   
+    filter: blur(30px);
 }
